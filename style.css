@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    background: aqua;
+    padding: 10px;
+    margin-left: 5%;
+}
+.leftSide {
+    width: 50%;
+    height: 80%;
+    background: red;
+    float: left;
+}
+.rightSide {
+    margin-left: 15%;
+    height: 80%;
+    background: green;
+}
