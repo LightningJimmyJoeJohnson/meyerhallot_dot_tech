@@ -1,22 +1,45 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: SourceCodePro;
+    background: #0F1011;
+    color: #726A66;
+}
+
+span {
+    background:#fff;
+    padding:0 10px;
+    color: #726A66;
 }
 
 .container {
     width: 90%;
-    height: 80%;
-    background: aqua;
+    height: 95%;
     padding: 10px;
     margin-left: 5%;
 }
 .leftSide {
-    width: 50%;
+    width: 20%;
     height: 80%;
-    background: red;
     float: left;
+    border-right: 1%;
+    border-right-style: solid;
+    border-right-color: #335E6F;
 }
 .rightSide {
     margin-left: 15%;
     height: 80%;
-    background: green;
 }
+
+.footer {
+    background: #335E6F;
+    height: 5%;
+}
+
+.catagory {
+	cursor: pointer;
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(./SourceCodePro-Regular.ttf);
+}
+
