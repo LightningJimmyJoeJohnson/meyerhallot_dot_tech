@@ -1,9 +1,22 @@
 {
-  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "experince": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna molestie at elementum eu facilisis sed odio morbi. Luctus venenatis lectus magna fringilla urna. Non quam lacus suspendisse faucibus. Pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
-  "gitProj": {
-    "a": "b",
-    "c": "d",
-    "e": "f"
-  }
+    "about": "I am a student at Gulliver Preparatory. I program for the school's FIRST Robotics team. I know Java, Python, and Javascript. I can do back end web development with Spring and Java. I am involved in Breakthrough Miami where we teach middle school students programing using Scratch, Construct 2, and Python.",
+    "experience": [
+        {
+            "orgName": "Valtech",
+            "title": "Front end Web Development Intern",
+            "period": "Jully 2017 – August 2017",
+            "description":"a"
+        },
+        {   "orgName": "Piret Johanson Studio",
+            "title": "Coputer Technitian",
+            "period": "September 2014 – September 2016",
+            "description":"Resolved problems with computers from failing hardware to network isuess."
+        }
+    ],
+    "gitProj": {
+        "a": "b",
+        "c": "d",
+        "e": "f"
+    }
 }
+

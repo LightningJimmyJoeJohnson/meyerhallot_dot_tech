@@ -9,7 +9,10 @@ loading();
 cats.forEach((element) =>{
 	element.addEventListener('click', () => {
 		console.log(element.id + ' clicked');
-		indexOf = keys.findIndex((elmClicked) => {return elmClicked.id == element.id});
+		indexOf = keys.findIndex((elmClicked) => {
+            return elmClicked === element.id.toString();
+        });
+        console.log(indexOf);
         fillTextBox(indexOf);
 	})
 });
@@ -39,7 +42,7 @@ function loading() {
 }
 
 function getText(){
-	fetch('https://api.myjson.com/bins/nsqyf').then((responce)=>{ //temp url replace with real one later
+	fetch('https://api.myjson.com/bins/10pxvb').then((responce)=>{ //temp url replace with real one later
 		if(responce.ok){
 			responce.json().then((data)=>{
 				console.log(data);
