@@ -40,12 +40,12 @@ function addProjects(data){
     Object.keys(data).forEach((key) => {
         console.log(data[key].name);
     html += `<div class="project shadow-large" style = "height:200px">
-                    <div class="project-info" style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+                    <div class="project-info">
                         <div>
-                            <p style="position:absolute; top: 7%; left: 5%;"> ${data[key].updated_at} </p>
-                            <p style= "position:absolute; top: 7%; right: 5%;"> ${data[key].language} </p>
+                            <p> ${data[key].updated_at} </p>
+                            <p> ${data[key].language} </p>
                         </div>
-                        <h3 style=""><a href="https://github.com/LightningJimmyJoeJohnson/${data[key].name}" style="color: #374054;">${data[key].name}</a></h3>
+                        <h3><a href="https://github.com/LightningJimmyJoeJohnson/${data[key].name}" style="color: #374054;">${data[key].name}</a></h3>
                          <div>
 						    <table style="float: left">
 							    <tr>
@@ -72,14 +72,12 @@ function addProjects(data){
              </div>
             <!-- End .project -->
             `
-    console.log(html);
     });
     drawProjects(html);
 }
 
 
 function drawProjects(html){
-   document.getElementById('projectRow').innerHTML = html; 
+   document.getElementById('gitProjects').innerHTML = html; 
 }
 
-httpGetRepos();
