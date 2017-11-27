@@ -1,13 +1,14 @@
 body {
-    font-family: SourceCodePro;
+    font-family: Terminus;
     background: #0F1011;
-    color: #726A66;
+    color: #887e79;
+    font-smooth: never;
 }
 
 span {
     background:#fff;
     padding:0 10px;
-    color: #726A66;
+    color: #887e79;
 }
 
 .container {
@@ -24,9 +25,8 @@ span {
 }
 .rightSide {
     margin-left: 15%;
-    height: 80%;
+    height: 100%;
     overflow-y: scroll;
-    overflow:hidden;
 }
 
 .footer {
@@ -39,8 +39,14 @@ span {
     font-size: 1em;
 }
 
+.expName{
+}
+
+.expPeriod{
+}
+
 @font-face {
-    font-family: SourceCodePro;
-    src: url(./SourceCodePro-Regular.ttf);
+    font-family:Terminus; 
+    src: url(./Ternimus.ttf);
 }
 

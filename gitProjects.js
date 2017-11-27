@@ -3,7 +3,6 @@ function httpGetRepos(){
     fetch('https://api.github.com/users/LightningJimmyJoeJohnson/repos').then((responce)=>{
         if(responce.ok){
             responce.json().then((data)=>{
-                console.log(data);
                 addProjects(formatData(data));
             }); 
         } 
@@ -24,7 +23,6 @@ function formatData(data){
     formatedData.sort((a,b) => {
         return Date.parse(b.updated_at) - Date.parse(a.updated_at);
     });
-    console.log(formatedData);
     return formatedData;
 }
 
@@ -38,7 +36,6 @@ function addProjects(data){
     let html = '';
     console.log(data);
     Object.keys(data).forEach((key) => {
-        console.log(data[key].name);
     html += `<div class="project shadow-large" style = "height:200px">
                     <div class="project-info">
                         <div>

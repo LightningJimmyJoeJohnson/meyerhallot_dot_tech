@@ -1,21 +1,20 @@
 let cats = Array.prototype.slice.call(document.getElementsByClassName('catagory'));
 let indexOf=0;
 let text;
-let keys;
 let interval;
 getText(); 
 loading();
 
-cats.forEach((element) =>{
-	element.addEventListener('click', () => {
-		console.log(element.id + ' clicked');
-		indexOf = keys.findIndex((elmClicked) => {
-            return elmClicked === element.id.toString();
-        });
-        console.log(indexOf);
-        fillTextBox(indexOf);
-	})
-});
+function initMouse(){
+    cats.forEach((element,i) =>{
+	    element.addEventListener('click', () => {
+		    console.log(element.id + ' clicked');
+            console.log(i);
+            fillTextBox(i);
+            indexOf=i;
+	    })
+    });
+}
 
 window.addEventListener("keydown", (e) => {
     switch(e.keyCode){
@@ -24,7 +23,7 @@ window.addEventListener("keydown", (e) => {
             fillTextBox(indexOf);
             break;
         case 40:
-            indexOf == keys.length-1 ? indexOf = keys.length-1 : indexOf++;
+            indexOf == 2 ? indexOf = 2 : indexOf++;
             fillTextBox(indexOf);
             break;
     }
@@ -47,8 +46,8 @@ function getText(){
 			responce.json().then((data)=>{
 				console.log(data);
                 text = data;
-                keys = Object.keys(data);
                 fillTextBox(0);
+                initMouse();
 			});
 		}else{
 			console.log('Error Unable to get json text');
@@ -57,6 +56,42 @@ function getText(){
 }
 
 function fillTextBox(index){
-    clearInterval(interval);
-    document.getElementById('textBox').innerHTML = text[keys[index]];
+    document.getElementById('textBox').innerHTML = "";
+    cats.forEach((item,index) => { //clear the colors on tab names
+        item.style.backgroundColor= '0F1011';
+        item.style.color= '887e79';
+    });
+    switch(index){
+        case 0:
+            cats[0].style.backgroundColor= '335E6F';
+            cats[0].style.color = '0F1011';
+            clearInterval(interval);
+            document.getElementById('textBox').innerHTML = text.about;
+            break;
+        case 1:
+            cats[1].style.backgroundColor= '335E6F';
+            cats[1].style.color = '0F1011';
+            document.getElementById('gitProjects').innerHTML = "";
+            clearInterval(interval);
+            document.getElementById('textBox').innerHTML = formatExper(text.experience);
+            break;
+        case 2:
+            cats[2].style.backgroundColor= '335E6F';
+            cats[2].style.color = '0F1011';
+            httpGetRepos();
+            break;
+    }
+}
+
+function formatExper(exper){
+    let html = '';
+    exper.forEach((item)=> {
+        html += `<div>`;
+        console.log(item);
+        html += `<div><p class ="expName">${item.title} @ ${item.orgName}</p> <p class ="expPeriod">${item.period}</p></div>`;
+        html += ``;
+        html += `<p class ="expDesc">${item.description}</p>`;
+        html += `</div>`;
+    });
+    return html;
 }
