@@ -1,13 +1,12 @@
 body {
-    font-family: Terminus;
-    background: #0F1011;
+    font-family: sans;
+    background: #E6EBF0;
     color: #887e79;
-    font-smooth: never;
 }
 
 span {
     background:#fff;
-    padding:0 10px;
+    padding:0 10px;s
     color: #887e79;
 }
 
@@ -20,17 +19,23 @@ span {
     height: 100%;
     float: left;
     border-right: 1%;
-    border-right-style: solid;
-    border-right-color: #335E6F;
+    /*! border-right-style: solid; */
+    /*! border-right-color: #335E6F; */
+    margin: 10px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 10px;
 }
 .rightSide {
     margin-left: 15%;
     height: 100%;
     overflow-y: scroll;
+    background: #FFFFFF;
+    margin: 10px;
+    border-radius: 2px;
 }
 
 .footer {
-    background: #335E6F;
     height: 5%;
 }
 
@@ -43,10 +48,5 @@ span {
 }
 
 .expPeriod{
-}
-
-@font-face {
-    font-family:Terminus; 
-    src: url(./Ternimus.ttf);
 }
 

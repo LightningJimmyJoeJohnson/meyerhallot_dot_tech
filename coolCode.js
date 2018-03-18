@@ -41,7 +41,7 @@ function loading() {
 }
 
 function getText(){
-	fetch('https://api.myjson.com/bins/10pxvb').then((responce)=>{ //temp url replace with real one later
+	fetch('https://api.myjson.com/bins/ki8gj').then((responce)=>{ //temp url replace with real one later
 		if(responce.ok){
 			responce.json().then((data)=>{
 				console.log(data);
@@ -58,25 +58,28 @@ function getText(){
 function fillTextBox(index){
     document.getElementById('textBox').innerHTML = "";
     cats.forEach((item,index) => { //clear the colors on tab names
-        item.style.backgroundColor= '0F1011';
+        item.style.backgroundColor= 'FFFFFF';
         item.style.color= '887e79';
     });
     switch(index){
         case 0:
-            cats[0].style.backgroundColor= '335E6F';
+            cats[1].style.color = '';
+            cats[2].style.color = '';
             cats[0].style.color = '0F1011';
             clearInterval(interval);
             document.getElementById('textBox').innerHTML = text.about;
             break;
         case 1:
-            cats[1].style.backgroundColor= '335E6F';
+            cats[0].style.color = '';
+            cats[2].style.color = '';
             cats[1].style.color = '0F1011';
             document.getElementById('gitProjects').innerHTML = "";
             clearInterval(interval);
             document.getElementById('textBox').innerHTML = formatExper(text.experience);
             break;
         case 2:
-            cats[2].style.backgroundColor= '335E6F';
+            cats[0].style.color = '';
+            cats[1].style.color = '';
             cats[2].style.color = '0F1011';
             httpGetRepos();
             break;

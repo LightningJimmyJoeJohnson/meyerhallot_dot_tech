@@ -1,6 +1,6 @@
 
 function httpGetRepos(){
-    fetch('https://api.github.com/users/LightningJimmyJoeJohnson/repos').then((responce)=>{
+    fetch('https://api.github.com/users/MeyerHallot/repos').then((responce)=>{
         if(responce.ok){
             responce.json().then((data)=>{
                 addProjects(formatData(data));
