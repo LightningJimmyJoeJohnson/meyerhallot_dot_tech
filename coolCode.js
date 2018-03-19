@@ -63,11 +63,13 @@ function fillTextBox(index){
     });
     switch(index){
         case 0:
+            let aboutFormat = `<p class ="aboutText">${text.about}</p>`;
             cats[1].style.color = '';
             cats[2].style.color = '';
             cats[0].style.color = '0F1011';
+            document.getElementById('gitProjects').innerHTML = "";
             clearInterval(interval);
-            document.getElementById('textBox').innerHTML = text.about;
+            document.getElementById('textBox').innerHTML = aboutFormat; 
             break;
         case 1:
             cats[0].style.color = '';
@@ -89,9 +91,9 @@ function fillTextBox(index){
 function formatExper(exper){
     let html = '';
     exper.forEach((item)=> {
-        html += `<div>`;
+        html += `<div class = "exp">`;
         console.log(item);
-        html += `<div><p class ="expName">${item.title} @ ${item.orgName}</p> <p class ="expPeriod">${item.period}</p></div>`;
+        html += `<p class ="expName">${item.title} @ ${item.orgName}</p> <p class ="expPeriod">${item.period}</p>`;
         html += ``;
         html += `<p class ="expDesc">${item.description}</p>`;
         html += `</div>`;
