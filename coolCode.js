@@ -18,11 +18,11 @@ function initMouse(){
 
 window.addEventListener("keydown", (e) => {
     switch(e.keyCode){
-        case 38:
+        case 37:
             indexOf == 0 ? indexOf = 0 :indexOf--;
             fillTextBox(indexOf);
             break;
-        case 40:
+        case 39:
             indexOf == 2 ? indexOf = 2 : indexOf++;
             fillTextBox(indexOf);
             break;
@@ -63,26 +63,15 @@ function fillTextBox(index){
     });
     switch(index){
         case 0:
-            let aboutFormat = `<p class ="aboutText">${text.about}</p>`;
             cats[1].style.color = '';
-            cats[2].style.color = '';
             cats[0].style.color = '0F1011';
-            document.getElementById('gitProjects').innerHTML = "";
-            clearInterval(interval);
-            document.getElementById('textBox').innerHTML = aboutFormat; 
-            break;
-        case 1:
-            cats[0].style.color = '';
-            cats[2].style.color = '';
-            cats[1].style.color = '0F1011';
             document.getElementById('gitProjects').innerHTML = "";
             clearInterval(interval);
             document.getElementById('textBox').innerHTML = formatExper(text.experience);
             break;
-        case 2:
+        case 1:
             cats[0].style.color = '';
-            cats[1].style.color = '';
-            cats[2].style.color = '0F1011';
+            cats[1].style.color = '0F1011';
             httpGetRepos();
             break;
     }

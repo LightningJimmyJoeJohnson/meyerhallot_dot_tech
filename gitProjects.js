@@ -42,7 +42,7 @@ function addProjects(data){
                             <p> ${data[key].updated_at} </p>
                             <p> ${data[key].language} </p>
                         </div>
-                        <h3><a href="https://github.com/LightningJimmyJoeJohnson/${data[key].name}" style="color: #374054;">${data[key].name}</a></h3>
+                        <h3><a href="https://github.com/MeyerHallot/${data[key].name}" style="color: #374054;">${data[key].name}</a></h3>
                          <div>
 						    <table style="float: left">
 							    <tr>
@@ -53,7 +53,7 @@ function addProjects(data){
   								</tr>
 							</table>
 
-                        <a href="https://github.com/LightningJimmyJoeJohnson/${data[key].name}">View Project</a>
+                        <a href="https://github.com/MeyerHallot/${data[key].name}">View Project</a>
 
 						    <table style="float: right">
 							    <tr>

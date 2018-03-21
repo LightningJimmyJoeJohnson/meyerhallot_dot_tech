@@ -11,13 +11,13 @@ span {
 }
 
 .container {
-    height: 95%;
-}
-.leftSide {
-    margin-left: 2%;
-    width: 20%;
     height: 100%;
-    float: left;
+}
+.topNav {
+    margin-left: 2%;
+    width: 66.5%;
+    height: auto;
+    float: right;
     border-right: 1%;
     /*! border-right-style: solid; */
     /*! border-right-color: #335E6F; */
@@ -25,14 +25,25 @@ span {
     background: #FFFFFF;
     border-radius: 2px;
     padding: 10px;
+    text-align: center;
 }
 .rightSide {
     margin-left: 15%;
     height: 100%;
     overflow-y: scroll;
     /*! background: #FFFFFF; */
-    margin: 10px;
+    /*! margin: 10px; */
     border-radius: 2px;
+    /*! float: right; */
+    width: 70%;
+}
+
+.leftSide{
+    empty-cells: show;
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    float: left;
 }
 
 .footer {
@@ -42,6 +53,7 @@ span {
 .catagory {
 	cursor: pointer;
     font-size: 1em;
+	display: inline;
 }
 
 .expName{
@@ -52,13 +64,13 @@ span {
 
 
 .exp{
-    height: 100px;
+    height: auto;
     background-color: white;
     border-radius: 2px;
     margin-right: 20px;
     padding-left: 10px;
     padding-top: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin: 10px;
 }
 
