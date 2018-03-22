@@ -44,6 +44,12 @@ span {
     width: 30%;
     background-color: white;
     float: left;
+    text-align: center;
+}
+
+.about_h1{
+    color:#514e4e;
+    border-bottom: 10px;
 }
 
 .footer {
