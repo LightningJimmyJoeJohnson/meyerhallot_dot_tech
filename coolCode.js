@@ -1,9 +1,11 @@
+//import text from './text.json
+
 let cats = Array.prototype.slice.call(document.getElementsByClassName('catagory'));
 let indexOf=0;
-let text;
 let interval;
-getText(); 
+//getText();
 loading();
+fillTextBox(0);
 
 function initMouse(){
     cats.forEach((element,i) =>{
@@ -45,8 +47,8 @@ function getText(){
 		if(responce.ok){
 			responce.json().then((data)=>{
 				console.log(data);
-                text = data;
-                fillTextBox(0);
+                //text = data;
+                //fillTextBox(0);
                 initMouse();
 			});
 		}else{
