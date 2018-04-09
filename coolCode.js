@@ -6,9 +6,12 @@ let interval;
 //getText();
 loading();
 fillTextBox(0);
+initMouse();
 
 function initMouse(){
+        console.log("bep");
     cats.forEach((element,i) =>{
+        console.log(element);
 	    element.addEventListener('click', () => {
 		    console.log(element.id + ' clicked');
             console.log(i);
@@ -31,9 +34,6 @@ window.addEventListener("keydown", (e) => {
     }
 }, false);
 
-
-console.log(cats);
-
 function loading() {
     let i = 1;
     interval = setInterval(() => {
@@ -42,20 +42,6 @@ function loading() {
     },500);
 }
 
-function getText(){
-	fetch('https://api.myjson.com/bins/ki8gj').then((responce)=>{ //temp url replace with real one later
-		if(responce.ok){
-			responce.json().then((data)=>{
-				console.log(data);
-                //text = data;
-                //fillTextBox(0);
-                initMouse();
-			});
-		}else{
-			console.log('Error Unable to get json text');
-		}
-	}); 
-}
 
 function fillTextBox(index){
     document.getElementById('textBox').innerHTML = "";

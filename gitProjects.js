@@ -28,7 +28,7 @@ function formatData(data){
 
 function formatTime(time){
     let formatedTime = new Date(Date.parse(time));
-    let formatedTimeString = '' + (formatedTime.getMonth()+1) + '/' + formatedTime.getDate() + '/' + formatedTime.getYear();
+    let formatedTimeString = '' + (formatedTime.getMonth()+1) + '/' + formatedTime.getDate() + '/' + (formatedTime.getYear()-100); //minus 100 becuase the 2018 shows up as 2118 with out it
     return formatedTimeString;
 }
 
@@ -37,13 +37,15 @@ function addProjects(data){
     console.log(data);
     Object.keys(data).forEach((key) => {
     html += `<div class="project shadow-large" style = "height:200px">
-                    <div class="project-info">
-                        <div>
-                            <p> ${data[key].updated_at} </p>
-                            <p> ${data[key].language} </p>
-                        </div>
-                        <h3><a href="https://github.com/MeyerHallot/${data[key].name}" style="color: #374054;">${data[key].name}</a></h3>
-                         <div>
+                   <div class="projLevel0">
+                        <p style="float: right"> ${data[key].updated_at} </p>
+                        <p style="float: left"> ${data[key].language} </p>
+                    </div>
+                    <div class="projLevel1">
+                        <h3><a href="https://github.com/MeyerHallot/${data[key].name}" style="color: #514E4E; text-decoration: none;">${data[key].name}</a></h3>
+                        <a href="https://github.com/MeyerHallot/${data[key].name}" style="color: #514e4e;">View Project</a>
+                    </div>
+                    <div class="projLevel2">
 						    <table style="float: left">
 							    <tr>
 								    <th>Stars</th>
@@ -53,7 +55,6 @@ function addProjects(data){
   								</tr>
 							</table>
 
-                        <a href="https://github.com/MeyerHallot/${data[key].name}">View Project</a>
 
 						    <table style="float: right">
 							    <tr>
@@ -64,7 +65,7 @@ function addProjects(data){
   								</tr>
 							</table>
                         </div>
-                    </div>
+
                     <!-- End .project-info -->
              </div>
             <!-- End .project -->
